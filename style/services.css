@@ -1,0 +1,317 @@
+.services {
+  min-height: 100vh;
+  padding: 100px 8%;
+  background: #041827;
+  margin-top: 80vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.section-title span {
+  color: #00abf0;
+}
+
+.services-intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: #092438;
+  border: 1px solid #12394e;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #00abf0;
+  box-shadow: 0 0 20px rgba(0, 171, 240, 0.2);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+.service-content {
+  padding: 22px;
+}
+
+.service-content h3 {
+  color: #00abf0;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.service-content p {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.experience {
+  min-height: 100vh;
+  padding: 100px 10%;
+  background: #041827;
+}
+
+.experience-intro {
+  text-align: center;
+  color: #ccc;
+  margin: 15px auto 65px;
+  line-height: 1.7;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 850px;
+  margin: auto;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #00abf0;
+  opacity: 0.5;
+}
+
+.experience-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  padding-bottom: 55px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 17px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  background: #00abf0;
+  border: 4px solid #041827;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00abf0;
+  z-index: 2;
+}
+
+.experience-image {
+  margin-left: 65px;
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.experience-info {
+  padding-top: 5px;
+}
+
+.experience-info span {
+  color: #00abf0;
+  font-size: 14px;
+}
+
+.experience-info h3 {
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+.experience-info h4 {
+  color: #00abf0;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.experience-info p {
+  color: #ccc;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.experience-image img {
+  transition: 0.4s;
+}
+
+.experience-item:hover .experience-image img {
+  transform: scale(1.06);
+}
+
+/* Media Query */
+@media (max-width: 1000px) {
+  .services {
+    padding: 80px 5%;
+    margin-top: 0;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 35px;
+  }
+
+  .service-content {
+    padding: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .services {
+    padding: 60px 5%;
+    margin-top: 0;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .services-intro {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .service-card img {
+    height: 190px;
+  }
+
+  .service-content {
+    padding: 18px;
+  }
+
+  .service-content h3 {
+    font-size: 19px;
+  }
+
+  .service-content p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1000px) {
+  .experience {
+    padding: 80px 5%;
+  }
+
+  .experience-timeline {
+    max-width: 100%;
+  }
+
+  .experience-item {
+    gap: 18px;
+    padding-bottom: 45px;
+  }
+
+  .experience-image {
+    width: 90px;
+    height: 90px;
+    margin-left: 60px;
+  }
+
+  .experience-info h3 {
+    font-size: 20px;
+  }
+
+  .experience-info h4 {
+    font-size: 15px;
+  }
+
+  .experience-info p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience {
+    padding: 60px 5%;
+  }
+
+  .experience-intro {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .experience-timeline::before {
+    left: 12px;
+  }
+
+  .experience-item {
+    gap: 12px;
+    padding-bottom: 35px;
+  }
+
+  .timeline-dot {
+    left: 4px;
+    width: 17px;
+    height: 17px;
+  }
+
+  .experience-image {
+    width: 65px;
+    height: 65px;
+    margin-left: 35px;
+  }
+
+  .experience-info {
+    padding-top: 0;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .experience-info span {
+    font-size: 11px;
+  }
+
+  .experience-info h3 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .experience-info h4 {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .experience-info p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
